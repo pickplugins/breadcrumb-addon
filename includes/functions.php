@@ -1,7 +1,7 @@
 <?php
 if ( ! defined('ABSPATH')) exit;  // if direct access
 
-add_filter('breadcrumb_link_text', 'breadcrumb_link_text_20200203');
+//add_filter('breadcrumb_link_text', 'breadcrumb_link_text_20200203');
 
 function breadcrumb_link_text_20200203($title){
 
@@ -14,7 +14,12 @@ function breadcrumb_link_text_20200203($title){
 }
 
 
-add_filter('breadcrumb_link_url', 'breadcrumb_link_url_20200203');
+
+
+
+
+
+//add_filter('breadcrumb_link_url', 'breadcrumb_link_url_20200203');
 
 function breadcrumb_link_url_20200203($link){
 
@@ -26,7 +31,16 @@ function breadcrumb_link_url_20200203($link){
 
 }
 
-add_filter('breadcrumb_theme_args', 'breadcrumb_theme_args_20200203');
+
+
+
+
+
+
+
+
+
+//add_filter('breadcrumb_theme_args', 'breadcrumb_theme_args_20200203');
 
 function breadcrumb_theme_args_20200203($themes){
 
@@ -43,7 +57,9 @@ function breadcrumb_theme_args_20200203($themes){
 
 
 
-add_filter('breadcrumb_themes_css', 'breadcrumb_themes_css_20200203');
+
+
+//add_filter('breadcrumb_themes_css', 'breadcrumb_themes_css_20200203');
 
 function breadcrumb_themes_css_20200203($breadcrumb_themes_css){
 
@@ -74,7 +90,10 @@ function breadcrumb_themes_css_20200203($breadcrumb_themes_css){
 
 
 
-add_filter('breadcrumb_settings_tabs', 'breadcrumb_settings_tabs_20200203');
+
+
+
+//add_filter('breadcrumb_settings_tabs', 'breadcrumb_settings_tabs_20200203');
 
 function breadcrumb_settings_tabs_20200203($settings_tabs){
 
@@ -93,9 +112,13 @@ function breadcrumb_settings_tabs_20200203($settings_tabs){
 }
 
 
-add_action('breadcrumb_settings_tabs_content_custom_tab','breadcrumb_settings_tabs_content_custom_tab');
 
-function breadcrumb_settings_tabs_content_custom_tab(){
+
+
+
+//add_action('breadcrumb_settings_tabs_content_custom_tab','breadcrumb_settings_tabs_content_custom_tab_20200203');
+
+function breadcrumb_settings_tabs_content_custom_tab_20200203(){
 
     $settings_tabs_field = new settings_tabs_field();
 
@@ -131,10 +154,14 @@ function breadcrumb_settings_tabs_content_custom_tab(){
 
 
 
-add_action('breadcrumb_settings_save', 'breadcrumb_settings_save_20200203');
+
+
+
+
+//add_action('breadcrumb_settings_save', 'breadcrumb_settings_save_20200203');
 
 if(!function_exists('breadcrumb_settings_save_20200203')) {
-    function breadcrumb_settings_save(){
+    function breadcrumb_settings_save_20200203(){
 
 
         $custom_option = sanitize_text_field($_POST['custom_option']);
@@ -142,3 +169,53 @@ if(!function_exists('breadcrumb_settings_save_20200203')) {
 
     }
 }
+
+
+
+
+
+
+
+
+//add_action('breadcrumb_main', 'breadcrumb_main_20200203');
+
+if(!function_exists('breadcrumb_main_20200203')) {
+    function breadcrumb_main_20200203(){
+
+
+        ?>
+        <p>Hello text</p>
+        <?php
+
+    }
+}
+
+
+
+
+
+
+//add_action('breadcrumb_main_item_loop', 'breadcrumb_main_item_loop_20200203');
+
+if(!function_exists('breadcrumb_main_item_loop_20200203')) {
+    function breadcrumb_main_item_loop_20200203($item){
+
+        //echo '<pre>'.var_export($item, true).'</pre>';
+
+        ?>
+        <span>Loop item text</span>
+        <?php
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
